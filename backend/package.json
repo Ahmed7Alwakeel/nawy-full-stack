@@ -1,0 +1,45 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "node app",
+  "author": "Ahmed Alwakeel",
+  "license": "ISC",
+  "main": "./src/server.ts",
+  "scripts": {
+    "start": "nodemon src/server.ts",
+    "seed": "ts-node src/seeders/userSeeder.ts",
+    "debug": "ndb src/server.ts"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/express": "^4.17.21",
+    "@types/hpp": "^0.2.6",
+    "@types/request": "^2.48.12",
+    "nodemon": "^3.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/cors": "^2.8.17",
+    "@types/jsonwebtoken": "^9.0.5",
+    "@types/node": "^20.11.13",
+    "@types/validator": "^13.11.9",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-mongo-sanitize": "^2.2.0",
+    "express-rate-limit": "^7.2.0",
+    "express-validator": "^7.0.1",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "limit": "^0.0.1",
+    "mongodb": "^6.3.0",
+    "mongoose": "^8.2.3",
+    "ndb": "^1.1.5",
+    "rate": "^0.1.1",
+    "request": "^2.88.2",
+    "xss-clean": "^0.1.4"
+  }
+}

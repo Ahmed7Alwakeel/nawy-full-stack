@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  mongo_db:
+    image: mongo:latest
+    container_name: mongo_db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+      MONGO_INITDB_DATABASE: nawy
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  backend:
+    build: ./backend
+    depends_on:
+      - mongo_db
+    ports:
+      - "4000:4000"
+    environment:
+      PORT: 4000
+      MONGO_LOCAL_URL: mongodb+srv://alwakeel1996:WElAjDFIW8jMeuWK@cluster0.jakqq.mongodb.net/
+      JWT_SECRET: d2b82d4b8f674cdb3a581879d9aea0b3c714a7dc98943344464s5edd5d01c60
+
+  admin-panel:
+    build:
+      context: ./admin-panel
+      dockerfile: Dockerfile
+    working_dir: /usr/src/app
+    ports:
+      - "3000:3000"
+    env_file:
+      - ./admin-panel/.env 
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    working_dir: /usr/src/app
+    ports:
+      - "8200:8200"
+
+volumes:
+  mongo_data:

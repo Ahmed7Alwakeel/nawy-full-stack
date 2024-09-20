@@ -1,0 +1,213 @@
+@import "./fonts.scss";
+@import "./variables.scss";
+@import "./buttons/button.scss";
+@import "./formInputs/fieldWrapper.scss";
+@import "./loaders/InitialLoader.scss";
+@import "./loaders/Skeleton.scss";
+@import "./loaders/BasicInfoSkeleton.scss";
+@import "./layout/SideMenu.scss";
+@import "./layout/Layout.scss";
+@import "./layout/AdminPanelHeader.scss";
+@import "./layout/Breadcrumbs.scss";
+@import "../styles/layout/Toastify.scss";
+@import "../styles/common/TableContainer.scss";
+@import "../styles/common/ModalContainer.scss";
+@import "../styles/common/ListHeader.scss";
+@import "../styles/common/SearchInputField.scss";
+@import "../styles/common/InputFieldsGeneralStyles.scss";
+@import "../modules/apartments/styles/ApartmentHighlights.scss";
+//Login
+@import "../modules/auth/styles/login.scss";
+@import "../modules/auth/styles/textContainer.scss";
+
+
+
+:root {
+	--saans-trial-regular: "PlusJakartaSans-Light", sans-serif;
+	--saans-trial-medium: "PlusJakartaSans-Medium", sans-serif;
+	--saans-trial-bold: "PlusJakartaSans-Bold", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h5,
+strong {
+	font-family: var(--saans_trial_regular);
+}
+
+p,
+h6 {
+	font-family: var(--saans_trial_regular);
+}
+
+.clickable {
+	cursor: pointer;
+}
+
+.centered-flex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.d-space {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.normal-cursor {
+	cursor: default !important;
+	pointer-events: none;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	-webkit-tap-highlight-color: transparent;
+}
+
+body.no-scroll {
+	position: fixed;
+	overflow: hidden;
+	height: 100%;
+}
+
+* {
+	box-sizing: border-box;
+	scrollbar-width: none;
+}
+
+button {
+	border: none;
+	padding: 0;
+	margin: 0;
+	font-family: var(--saans_trial_medium);
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	line-height: 1.1;
+}
+
+p+p {
+	margin: 0;
+}
+
+p,
+a,
+ul {
+	margin: 0;
+	padding: 0;
+	// font-size: 1rem;
+}
+
+ul {
+	list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+	margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+strong {
+	font-family: var(--saans_trial_medium);
+}
+
+p {
+	font-family: var(--saans_trial_medium);
+}
+
+body,
+input,
+textarea,
+select {
+	font-family: var(--saans_trial_medium), "Arial";
+	font-weight: 400;
+	line-height: 1;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+	-webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+h1 {
+	font-size: 6rem;
+	line-height: 100%;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size: 4rem;
+	line-height: 100%;
+	text-transform: uppercase;
+}
+
+h3 {
+	font-size: 3rem;
+	line-height: 100%;
+	text-transform: uppercase;
+}
+
+h4 {
+	font-size: 1.5rem;
+	line-height: 100%;
+	text-transform: capitalize;
+}
+
+h5 {
+	font-size: 0.75rem;
+	line-height: 100%;
+	text-transform: capitalize;
+}
+
+h6 {
+	font-size: 1rem;
+	line-height: 100%;
+}
+
+p {
+	font-size: 1rem;
+	line-height: 140%;
+}
+
+.pointer {
+	cursor: pointer;
+}
+@media (min-width: 1200px) {
+	html {
+		font-size: 14px;
+	}
+}
+@media (min-width: 1400px) {
+	html {
+		font-size: 16px;
+	}
+}

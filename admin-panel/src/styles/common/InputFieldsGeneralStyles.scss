@@ -1,0 +1,18 @@
+.inputs_group {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	gap: 3rem;
+
+	.field_wrapper_container {
+		flex: 1;
+	}
+
+}
+
+@media (max-width: 1024px) {
+	.inputs_group {
+		flex-direction: column;
+		gap: 0;
+	}
+}

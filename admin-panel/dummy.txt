@@ -1,0 +1,793 @@
+"data": {
+        "distributor_id": "1",
+        "vehicle_id": "2",
+        "customer_id": 1,
+        "user_id": 1,
+        "updated_at": "2024-08-21T10:06:46.000000Z",
+        "created_at": "2024-08-21T10:06:46.000000Z",
+        "id": 20,
+        "current_step": {
+            "id": 3,
+            "name": {
+                "ar": "الخطوة الاولى",
+                "en": "step 1"
+            },
+            "created_at": "2024-08-12T15:47:01.000000Z",
+            "updated_at": "2024-08-12T15:47:01.000000Z",
+            "order": 1,
+            "pivot": {
+                "application_request_id": 20,
+                "step_id": 3,
+                "order": 1,
+                "status": 2,
+                "product_id": 11,
+                "vehicle_price": 1000,
+                "duration_from": 1,
+                "duration_to": 3,
+                "down_payment": 100,
+                "profit_rate": [
+                    {
+                        "profit_value": 50
+                    },
+                    {
+                        "profit_value": 100
+                    },
+                    {
+                        "profit_value": 150
+                    }
+                ],
+                "admin_fee": {
+                    "admin_fee": 10,
+                    "old_admin_fee": 10
+                },
+                "insurance_fee": 50,
+                "balloon_payment": null,
+                "created_at": "2024-08-21T10:06:46.000000Z",
+                "updated_at": "2024-08-21T10:06:46.000000Z",
+                "total_price": 1330,
+                "product": {
+                    "id": 11,
+                    "minimum_age": 0,
+                    "maximum_age": 0,
+                    "duration_from": 1,
+                    "duration_to": 5,
+                    "down_payment": 10,
+                    "profit_rate": [
+                        "5",
+                        "10",
+                        "15",
+                        "20",
+                        "25"
+                    ],
+                    "admin_fee": 1,
+                    "insurance_fee": 5,
+                    "disclaimer": {
+                        "ar": "نص إخلاء المسؤولية عن رسوم التأمين",
+                        "en": "Disclaimer text for the Insurance fee"
+                    },
+                    "service_provider_id": 1,
+                    "created_at": "2024-08-06T11:35:59.000000Z",
+                    "updated_at": "2024-08-06T11:35:59.000000Z",
+                    "offers": [],
+                    "service_provider": {
+                        "id": 1,
+                        "name": {
+                            "ar": "الراجحي 13",
+                            "en": "Al Rajhi 13"
+                        },
+                        "address": {
+                            "city": "Riyadh",
+                            "street": "Al Malaz"
+                        },
+                        "limit": 20000,
+                        "is_active": 0,
+                        "pending_payments": 0,
+                        "created_at": "2024-07-28T13:13:40.000000Z",
+                        "updated_at": "2024-08-20T13:36:52.000000Z",
+                        "limit_used": 30000,
+                        "logo_url": "http://localhost:8000/storage/images/service-providers/J71cFB8k4O4qJkoqaeZXD045ZJJYfvZB2jlwlY1S.jpg",
+                        "logo": {
+                            "image_id": 1,
+                            "imageable_type": "App\\Models\\ServiceProvider",
+                            "imageable_id": 1,
+                            "name": "J71cFB8k4O4qJkoqaeZXD045ZJJYfvZB2jlwlY1S.jpg",
+                            "alt_text": null,
+                            "created_at": "2024-07-28T13:13:40.000000Z",
+                            "updated_at": "2024-07-28T13:13:40.000000Z",
+                            "color_id": null,
+                            "image_path": "images/service-providers/",
+                            "color_name": null,
+                            "order": null,
+                            "color_wheel_base_id": null,
+                            "base_color_image": null,
+                            "vertical_image_name": null,
+                            "hexcode": null,
+                            "trim_cab_type_id": null,
+                            "featured": 0
+                        }
+                    }
+                },
+                "step": {
+                    "id": 3,
+                    "name": {
+                        "ar": "الخطوة الاولى",
+                        "en": "step 1"
+                    },
+                    "created_at": "2024-08-12T15:47:01.000000Z",
+                    "updated_at": "2024-08-12T15:47:01.000000Z",
+                    "order": 1
+                }
+            },
+            "entities": [
+                {
+                    "id": 3,
+                    "name": "personal_information",
+                    "fields": [
+                        {
+                            "name": "first_name",
+                            "type": "text",
+                            "label": {
+                                "ar": "الاسم الاول",
+                                "en": "first_name"
+                            },
+                            "validation": [
+                                "required",
+                                "string"
+                            ]
+                        },
+                        {
+                            "name": "last_name",
+                            "type": "text",
+                            "label": {
+                                "ar": "الاسم الاخير",
+                                "en": "last_name"
+                            },
+                            "validation": [
+                                "required",
+                                "string"
+                            ]
+                        },
+                        {
+                            "name": "phone",
+                            "type": "text",
+                            "label": {
+                                "ar": "الرقم",
+                                "en": "phone"
+                            },
+                            "validation": [
+                                "required",
+                                "string"
+                            ]
+                        },
+                        {
+                            "name": "logo",
+                            "type": "file",
+                            "label": {
+                                "ar": "لوجو",
+                                "en": "logo"
+                            },
+                            "validation": [
+                                "required",
+                                "image",
+                                "mimes:png,jpg,jpeg,webp"
+                            ]
+                        },
+                        {
+                            "name": "photo",
+                            "type": "file",
+                            "label": {
+                                "ar": "الصورة",
+                                "en": "phone"
+                            },
+                            "validation": [
+                                "required",
+                                "image",
+                                "mimes:png,jpg,jpeg,webp"
+                            ]
+                        }
+                    ],
+                    "step_id": 3,
+                    "created_at": "2024-08-12T15:47:01.000000Z",
+                    "updated_at": "2024-08-12T15:47:01.000000Z",
+                    "values": [
+                        {
+                            "id": 1,
+                            "entity_id": 3,
+                            "values": [
+                                {
+                                    "key": "first_name",
+                                    "type": "text",
+                                    "value": "Mostafa"
+                                },
+                                {
+                                    "key": "last_name",
+                                    "type": "text",
+                                    "value": "El-sotaly"
+                                },
+                                {
+                                    "key": "phone",
+                                    "type": "text",
+                                    "value": "01120001044"
+                                },
+                                {
+                                    "key": "logo",
+                                    "type": "file",
+                                    "value": 3
+                                },
+                                {
+                                    "key": "photo",
+                                    "type": "file",
+                                    "value": 4
+                                }
+                            ],
+                            "application_request_id": 1,
+                            "created_at": "2024-08-13T10:34:25.000000Z",
+                            "updated_at": "2024-08-13T10:34:25.000000Z",
+                            "documents": [
+                                {
+                                    "id": 3,
+                                    "name": "sCZOFkW5Q7pRhveKitjeC0pjHxOsH4NYBe24viQX.jpg",
+                                    "created_at": "2024-08-13T10:34:25.000000Z",
+                                    "updated_at": "2024-08-13T10:34:25.000000Z",
+                                    "documentable_type": "App\\Models\\EntityValue",
+                                    "documentable_id": 1,
+                                    "path": "/uploads/application-request/entities/",
+                                    "slug": "logo",
+                                    "url": "http://localhost:8000/storage/uploads/application-request/entities/sCZOFkW5Q7pRhveKitjeC0pjHxOsH4NYBe24viQX.jpg"
+                                },
+                                {
+                                    "id": 4,
+                                    "name": "jJUcm7hXObBsh6FbJYC4ic1doQp95nWNYFf9hWlG.jpg",
+                                    "created_at": "2024-08-13T10:34:25.000000Z",
+                                    "updated_at": "2024-08-13T10:34:25.000000Z",
+                                    "documentable_type": "App\\Models\\EntityValue",
+                                    "documentable_id": 1,
+                                    "path": "/uploads/application-request/entities/",
+                                    "slug": "photo",
+                                    "url": "http://localhost:8000/storage/uploads/application-request/entities/jJUcm7hXObBsh6FbJYC4ic1doQp95nWNYFf9hWlG.jpg"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 2,
+                            "entity_id": 3,
+                            "values": [
+                                {
+                                    "key": "first_name",
+                                    "type": "text",
+                                    "value": "Mostafa"
+                                },
+                                {
+                                    "key": "last_name",
+                                    "type": "text",
+                                    "value": "El-sotaly"
+                                },
+                                {
+                                    "key": "phone",
+                                    "type": "text",
+                                    "value": "01120001044"
+                                },
+                                {
+                                    "key": "logo",
+                                    "type": "file",
+                                    "value": 5
+                                },
+                                {
+                                    "key": "photo",
+                                    "type": "file",
+                                    "value": 6
+                                }
+                            ],
+                            "application_request_id": 1,
+                            "created_at": "2024-08-13T10:36:01.000000Z",
+                            "updated_at": "2024-08-13T10:36:01.000000Z",
+                            "documents": [
+                                {
+                                    "id": 5,
+                                    "name": "T25TjsdO2iX4hXc8pdihV8AUuV0HmT156ckb3DEY.jpg",
+                                    "created_at": "2024-08-13T10:36:01.000000Z",
+                                    "updated_at": "2024-08-13T10:36:01.000000Z",
+                                    "documentable_type": "App\\Models\\EntityValue",
+                                    "documentable_id": 2,
+                                    "path": "/uploads/application-request/entities/",
+                                    "slug": "logo",
+                                    "url": "http://localhost:8000/storage/uploads/application-request/entities/T25TjsdO2iX4hXc8pdihV8AUuV0HmT156ckb3DEY.jpg"
+                                },
+                                {
+                                    "id": 6,
+                                    "name": "YeaIvdFTFNFcCQTTQPa5quFy20RHv8aamFJtjCqN.jpg",
+                                    "created_at": "2024-08-13T10:36:01.000000Z",
+                                    "updated_at": "2024-08-13T10:36:01.000000Z",
+                                    "documentable_type": "App\\Models\\EntityValue",
+                                    "documentable_id": 2,
+                                    "path": "/uploads/application-request/entities/",
+                                    "slug": "photo",
+                                    "url": "http://localhost:8000/storage/uploads/application-request/entities/YeaIvdFTFNFcCQTTQPa5quFy20RHv8aamFJtjCqN.jpg"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 3,
+                            "entity_id": 3,
+                            "values": [
+                                {
+                                    "key": "first_name",
+                                    "type": "text",
+                                    "value": "Mostafa"
+                                },
+                                {
+                                    "key": "last_name",
+                                    "type": "text",
+                                    "value": "El-sotaly"
+                                },
+                                {
+                                    "key": "phone",
+                                    "type": "text",
+                                    "value": "01120001044"
+                                },
+                                {
+                                    "key": "logo",
+                                    "type": "file",
+                                    "value": 7
+                                },
+                                {
+                                    "key": "photo",
+                                    "type": "file",
+                                    "value": 8
+                                }
+                            ],
+                            "application_request_id": 1,
+                            "created_at": "2024-08-13T10:38:28.000000Z",
+                            "updated_at": "2024-08-13T10:38:28.000000Z",
+                            "documents": [
+                                {
+                                    "id": 7,
+                                    "name": "i88mxt6WP0OnDHjLqhM4YJR6ijgLjIQSdlG0owT5.jpg",
+                                    "created_at": "2024-08-13T10:38:28.000000Z",
+                                    "updated_at": "2024-08-13T10:38:28.000000Z",
+                                    "documentable_type": "App\\Models\\EntityValue",
+                                    "documentable_id": 3,
+                                    "path": "/uploads/application-request/entities/",
+                                    "slug": "logo",
+                                    "url": "http://localhost:8000/storage/uploads/application-request/entities/i88mxt6WP0OnDHjLqhM4YJR6ijgLjIQSdlG0owT5.jpg"
+                                },
+                                {
+                                    "id": 8,
+                                    "name": "44pZavWEzDxrAhhNx168w28PRWHTawV7BTPwBHMu.jpg",
+                                    "created_at": "2024-08-13T10:38:28.000000Z",
+                                    "updated_at": "2024-08-13T10:38:28.000000Z",
+                                    "documentable_type": "App\\Models\\EntityValue",
+                                    "documentable_id": 3,
+                                    "path": "/uploads/application-request/entities/",
+                                    "slug": "photo",
+                                    "url": "http://localhost:8000/storage/uploads/application-request/entities/44pZavWEzDxrAhhNx168w28PRWHTawV7BTPwBHMu.jpg"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 4,
+                            "entity_id": 3,
+                            "values": [
+                                {
+                                    "key": "first_name",
+                                    "type": "text",
+                                    "value": "Mostafa"
+                                },
+                                {
+                                    "key": "last_name",
+                                    "type": "text",
+                                    "value": "El-sotaly"
+                                },
+                                {
+                                    "key": "phone",
+                                    "type": "text",
+                                    "value": "01120001044"
+                                },
+                                {
+                                    "key": "logo",
+                                    "type": "file",
+                                    "value": 9
+                                },
+                                {
+                                    "key": "photo",
+                                    "type": "file",
+                                    "value": 10
+                                }
+                            ],
+                            "application_request_id": 1,
+                            "created_at": "2024-08-13T10:38:51.000000Z",
+                            "updated_at": "2024-08-13T10:38:51.000000Z",
+                            "documents": [
+                                {
+                                    "id": 9,
+                                    "name": "7pJBDtuOChwWTNj3QhqwYKOc9MxU25j38SIQmlGS.jpg",
+                                    "created_at": "2024-08-13T10:38:51.000000Z",
+                                    "updated_at": "2024-08-13T10:38:51.000000Z",
+                                    "documentable_type": "App\\Models\\EntityValue",
+                                    "documentable_id": 4,
+                                    "path": "/uploads/application-request/entities/",
+                                    "slug": "logo",
+                                    "url": "http://localhost:8000/storage/uploads/application-request/entities/7pJBDtuOChwWTNj3QhqwYKOc9MxU25j38SIQmlGS.jpg"
+                                },
+                                {
+                                    "id": 10,
+                                    "name": "3aEmSZ6ZbYXfb9ln3ekkSfjajvegqlpdgblicdwM.jpg",
+                                    "created_at": "2024-08-13T10:38:51.000000Z",
+                                    "updated_at": "2024-08-13T10:38:51.000000Z",
+                                    "documentable_type": "App\\Models\\EntityValue",
+                                    "documentable_id": 4,
+                                    "path": "/uploads/application-request/entities/",
+                                    "slug": "photo",
+                                    "url": "http://localhost:8000/storage/uploads/application-request/entities/3aEmSZ6ZbYXfb9ln3ekkSfjajvegqlpdgblicdwM.jpg"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 5,
+                            "entity_id": 3,
+                            "values": [
+                                {
+                                    "key": "first_name",
+                                    "type": "text",
+                                    "value": "Mostafa"
+                                },
+                                {
+                                    "key": "last_name",
+                                    "type": "text",
+                                    "value": "El-sotaly"
+                                },
+                                {
+                                    "key": "phone",
+                                    "type": "text",
+                                    "value": "01120001044"
+                                },
+                                {
+                                    "key": "logo",
+                                    "type": "file",
+                                    "value": 11
+                                },
+                                {
+                                    "key": "photo",
+                                    "type": "file",
+                                    "value": 12
+                                }
+                            ],
+                            "application_request_id": 1,
+                            "created_at": "2024-08-13T10:39:38.000000Z",
+                            "updated_at": "2024-08-13T10:39:38.000000Z",
+                            "documents": [
+                                {
+                                    "id": 11,
+                                    "name": "3MXbtU0UlZGoELGPIGSqlcY4zyeKjUCvYo2qQEuM.jpg",
+                                    "created_at": "2024-08-13T10:39:38.000000Z",
+                                    "updated_at": "2024-08-13T10:39:38.000000Z",
+                                    "documentable_type": "App\\Models\\EntityValue",
+                                    "documentable_id": 5,
+                                    "path": "/uploads/application-request/entities/",
+                                    "slug": "logo",
+                                    "url": "http://localhost:8000/storage/uploads/application-request/entities/3MXbtU0UlZGoELGPIGSqlcY4zyeKjUCvYo2qQEuM.jpg"
+                                },
+                                {
+                                    "id": 12,
+                                    "name": "OvTMBwcWCiDj12KIT1ltrinxJJzuMrxz0e1Bil0c.jpg",
+                                    "created_at": "2024-08-13T10:39:38.000000Z",
+                                    "updated_at": "2024-08-13T10:39:38.000000Z",
+                                    "documentable_type": "App\\Models\\EntityValue",
+                                    "documentable_id": 5,
+                                    "path": "/uploads/application-request/entities/",
+                                    "slug": "photo",
+                                    "url": "http://localhost:8000/storage/uploads/application-request/entities/OvTMBwcWCiDj12KIT1ltrinxJJzuMrxz0e1Bil0c.jpg"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 6,
+                            "entity_id": 3,
+                            "values": [
+                                {
+                                    "key": "first_name",
+                                    "type": "text",
+                                    "value": "Mostafa"
+                                },
+                                {
+                                    "key": "last_name",
+                                    "type": "text",
+                                    "value": "El-sotaly"
+                                },
+                                {
+                                    "key": "phone",
+                                    "type": "text",
+                                    "value": "01120001044"
+                                },
+                                {
+                                    "key": "logo",
+                                    "type": "file",
+                                    "value": 13
+                                },
+                                {
+                                    "key": "photo",
+                                    "type": "file",
+                                    "value": 14
+                                }
+                            ],
+                            "application_request_id": 1,
+                            "created_at": "2024-08-13T11:21:44.000000Z",
+                            "updated_at": "2024-08-13T11:21:44.000000Z",
+                            "documents": [
+                                {
+                                    "id": 13,
+                                    "name": "bovxAXtExek6aczrz00WBa8PwJMBrYeaXKi6iaU5.jpg",
+                                    "created_at": "2024-08-13T11:21:44.000000Z",
+                                    "updated_at": "2024-08-13T11:21:44.000000Z",
+                                    "documentable_type": "App\\Models\\EntityValue",
+                                    "documentable_id": 6,
+                                    "path": "/uploads/application-request/entities/",
+                                    "slug": "logo",
+                                    "url": "http://localhost:8000/storage/uploads/application-request/entities/bovxAXtExek6aczrz00WBa8PwJMBrYeaXKi6iaU5.jpg"
+                                },
+                                {
+                                    "id": 14,
+                                    "name": "7OCMyYAUO3BMn7n2wSUOxDNYWFZkJ6uJoJwg1xA8.jpg",
+                                    "created_at": "2024-08-13T11:21:44.000000Z",
+                                    "updated_at": "2024-08-13T11:21:44.000000Z",
+                                    "documentable_type": "App\\Models\\EntityValue",
+                                    "documentable_id": 6,
+                                    "path": "/uploads/application-request/entities/",
+                                    "slug": "photo",
+                                    "url": "http://localhost:8000/storage/uploads/application-request/entities/7OCMyYAUO3BMn7n2wSUOxDNYWFZkJ6uJoJwg1xA8.jpg"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "vehicle": {
+            "id": 2,
+            "variant_id": 2,
+            "model_year": 1980,
+            "price": 0,
+            "used": 0,
+            "base_color_id": null,
+            "trim_cab_type_id": 9,
+            "user_id": null,
+            "chassis": "ab",
+            "location_id": null,
+            "mileage": null,
+            "color_wheel_base_id": 4,
+            "state": "Reserved on Website & Pending on Dump",
+            "financing_price": null,
+            "last_synced": "2024-08-06 14:54:57",
+            "deleted_at": null,
+            "retail_price": null,
+            "make_model": null,
+            "type": "customer",
+            "can_be_booked_by_mansour": true,
+            "variant": {
+                "id": 2,
+                "price": 1520000,
+                "name": "",
+                "transmission_id": null,
+                "body_type_id": null,
+                "vehicle_model_id": 1,
+                "warranty_months": null,
+                "warranty_mileage": null,
+                "cc": 0,
+                "fuel_type_id": null,
+                "featured": 0,
+                "hidden": 1,
+                "financing_price": null,
+                "retail_price": null,
+                "model_year": null,
+                "display_name": "LV37S",
+                "treated_as": null,
+                "addon_price": 0,
+                "display_name_image": null,
+                "transmission": null,
+                "vehicle_model": {
+                    "id": 1,
+                    "name": "1SC26",
+                    "image": null,
+                    "vehicle_make_id": 1,
+                    "description": "1SC26",
+                    "hidden": 0,
+                    "slug": "1sc26",
+                    "brochure": "",
+                    "featured": 0,
+                    "meta_image": null,
+                    "meta_description": "",
+                    "model_name_image": null,
+                    "long_description": "",
+                    "order": 0,
+                    "variants_min_price": null,
+                    "main_image_path": "images/models/",
+                    "variants_max_price": null,
+                    "variant_first_exterior_image": null,
+                    "vehicle_make": {
+                        "id": 1,
+                        "logo": null,
+                        "name": "Chevrolet",
+                        "slug": "chevrolet",
+                        "hidden": 0,
+                        "enabled_service_booking": 1,
+                        "disable_locations_checkout": 0,
+                        "logo_white": null,
+                        "logo_black": null,
+                        "primary_color_hex": "1111",
+                        "secondary_color_hex": null,
+                        "hotline_number": null,
+                        "explore_button": "call_us",
+                        "whats_app_number": null,
+                        "logo_image_path": "images/logos/brands/",
+                        "whats_app_link": "https://wa.me/"
+                    }
+                },
+                "body_type": null,
+                "fuel_type": null
+            },
+            "service_requests": []
+        },
+        "products": [
+            {
+                "id": 11,
+                "minimum_age": 0,
+                "maximum_age": 0,
+                "duration_from": 1,
+                "duration_to": 5,
+                "down_payment": 10,
+                "profit_rate": [
+                    "5",
+                    "10",
+                    "15",
+                    "20",
+                    "25"
+                ],
+                "admin_fee": 1,
+                "insurance_fee": 5,
+                "disclaimer": {
+                    "ar": "نص إخلاء المسؤولية عن رسوم التأمين",
+                    "en": "Disclaimer text for the Insurance fee"
+                },
+                "service_provider_id": 1,
+                "created_at": "2024-08-06T11:35:59.000000Z",
+                "updated_at": "2024-08-06T11:35:59.000000Z",
+                "pivot": {
+                    "application_request_id": 20,
+                    "product_id": 11,
+                    "order": 1,
+                    "status": 2,
+                    "step_id": 3,
+                    "vehicle_price": 1000,
+                    "duration_from": 1,
+                    "duration_to": 3,
+                    "down_payment": 100,
+                    "profit_rate": [
+                        {
+                            "profit_value": 50
+                        },
+                        {
+                            "profit_value": 100
+                        },
+                        {
+                            "profit_value": 150
+                        }
+                    ],
+                    "admin_fee": {
+                        "admin_fee": 10,
+                        "old_admin_fee": 10
+                    },
+                    "insurance_fee": 50,
+                    "balloon_payment": null,
+                    "created_at": "2024-08-21T10:06:46.000000Z",
+                    "updated_at": "2024-08-21T10:06:46.000000Z",
+                    "total_price": 1330,
+                    "product": {
+                        "id": 11,
+                        "minimum_age": 0,
+                        "maximum_age": 0,
+                        "duration_from": 1,
+                        "duration_to": 5,
+                        "down_payment": 10,
+                        "profit_rate": [
+                            "5",
+                            "10",
+                            "15",
+                            "20",
+                            "25"
+                        ],
+                        "admin_fee": 1,
+                        "insurance_fee": 5,
+                        "disclaimer": {
+                            "ar": "نص إخلاء المسؤولية عن رسوم التأمين",
+                            "en": "Disclaimer text for the Insurance fee"
+                        },
+                        "service_provider_id": 1,
+                        "created_at": "2024-08-06T11:35:59.000000Z",
+                        "updated_at": "2024-08-06T11:35:59.000000Z",
+                        "offers": [],
+                        "service_provider": {
+                            "id": 1,
+                            "name": {
+                                "ar": "الراجحي 13",
+                                "en": "Al Rajhi 13"
+                            },
+                            "address": {
+                                "city": "Riyadh",
+                                "street": "Al Malaz"
+                            },
+                            "limit": 20000,
+                            "is_active": 0,
+                            "pending_payments": 0,
+                            "created_at": "2024-07-28T13:13:40.000000Z",
+                            "updated_at": "2024-08-20T13:36:52.000000Z",
+                            "limit_used": 30000,
+                            "logo_url": "http://localhost:8000/storage/images/service-providers/J71cFB8k4O4qJkoqaeZXD045ZJJYfvZB2jlwlY1S.jpg",
+                            "logo": {
+                                "image_id": 1,
+                                "imageable_type": "App\\Models\\ServiceProvider",
+                                "imageable_id": 1,
+                                "name": "J71cFB8k4O4qJkoqaeZXD045ZJJYfvZB2jlwlY1S.jpg",
+                                "alt_text": null,
+                                "created_at": "2024-07-28T13:13:40.000000Z",
+                                "updated_at": "2024-07-28T13:13:40.000000Z",
+                                "color_id": null,
+                                "image_path": "images/service-providers/",
+                                "color_name": null,
+                                "order": null,
+                                "color_wheel_base_id": null,
+                                "base_color_image": null,
+                                "vertical_image_name": null,
+                                "hexcode": null,
+                                "trim_cab_type_id": null,
+                                "featured": 0
+                            }
+                        }
+                    },
+                    "step": {
+                        "id": 3,
+                        "name": {
+                            "ar": "الخطوة الاولى",
+                            "en": "step 1"
+                        },
+                        "created_at": "2024-08-12T15:47:01.000000Z",
+                        "updated_at": "2024-08-12T15:47:01.000000Z",
+                        "order": 1
+                    }
+                }
+            }
+        ],
+        "customer": {
+            "id": 1,
+            "full_name": {
+                "en": "Eyad Mohammed Alasfahani",
+                "ar": "اياد محمد"
+            },
+            "email": "eyadalasfahani@gmail.com",
+            "dob": "0000-00-00",
+            "national_id": "29407290103772",
+            "gender": "male",
+            "address": {
+                "city": "Cairo",
+                "street": "Merghani",
+                "apartment_no": "12"
+            },
+            "zip_code": "18841",
+            "job_title": "Software Engineer",
+            "salary": 20000,
+            "nationality": "saudi",
+            "service_period": 3,
+            "salary_transferred_to_id": 1,
+            "created_at": "2024-08-06T11:55:47.000000Z",
+            "updated_at": "2024-08-21T10:06:46.000000Z",
+            "mobile": "01005586412"
+        },
+        "distributor": {
+            "id": 1,
+            "name": "test en update",
+            "address": "",
+            "created_at": "2024-07-29T09:02:44.000000Z",
+            "updated_at": "2024-07-31T09:11:07.000000Z",
+            "phone": "01120001044",
+            "is_active": 0
+        }
+    },

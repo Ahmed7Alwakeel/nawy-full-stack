@@ -1,0 +1,1 @@
+self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{\"/Users/a1softechpro/Desktop/ME/nawy/frontend/src/app/layout\":[\"static/media/a34f9d1faa5f3315-s.p.woff2\",\"static/media/53a5ca69abbe921b-s.p.ttf\",\"static/media/1bf75fbc4c692810-s.p.ttf\"]},\"appUsingSizeAdjust\":true,\"pagesUsingSizeAdjust\":false}"

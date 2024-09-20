@@ -1,0 +1,152 @@
+.field_wrapper_container {
+	padding-bottom: 2.5rem;
+	position: relative;
+	width: 100%;
+
+	.error {
+		position: absolute;
+		bottom: 1.5rem;
+		left: $padding_inline;
+		color: red;
+		font-size: 0.85rem;
+	}
+
+	&.no-padding {
+		padding-bottom: 0;
+	}
+
+	.header {
+		margin-bottom: 1rem;
+
+		.title {
+			margin-bottom: 0.5rem;
+			display: flex;
+			align-items: center;
+			text-transform: capitalize;
+		}
+	}
+
+	.input_wrapper {
+		position: relative;
+
+		.error {
+			position: absolute;
+			bottom: -$padding_inline;
+			left: $padding_inline;
+			color: red;
+			font-size: 0.85rem;
+		}
+
+		.error-icon {
+			position: absolute;
+			right: 1.5rem;
+			transform: translateY(-50%);
+			top: 50%;
+			color: red;
+		}
+
+		.field {
+			position: relative;
+
+			.fixed-place-holder {
+				position: absolute;
+				right: 1rem;
+				padding-inline-start: 0.8rem;
+				border-inline-start: 1px solid rgba(0, 0, 0, 0.4);
+				height: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				top: 50%;
+				transform: translateY(-50%);
+				opacity: 0.5;
+				height: 70%;
+				font-size: 0.8rem;
+			}
+
+			input {
+				flex: 1;
+				width: 100%;
+				padding: 1rem $padding_inline_inputs;
+				border-radius: $btns_border_radius;
+				outline: 0;
+				border: $border;
+				transition: 0.2s all;
+				font-size: 0.9rem;
+
+				&::placeholder {
+					font-size: 0.85rem;
+				}
+
+				&:focus {
+					border: $border;
+					outline: 0;
+				}
+
+				&:focus-visible {
+					border: $border;
+					outline: 0;
+				}
+
+				&.input-error {
+					border-color: red;
+					background-color: #f7e7e9;
+
+					&:focus {
+						border-color: red;
+					}
+
+					&:focus-visible {
+						border-color: red;
+					}
+				}
+
+				&::after {
+					visibility: visible !important;
+				}
+
+				/* Chrome, Safari, Edge, Opera */
+				&::-webkit-outer-spin-button,
+				&::-webkit-inner-spin-button {
+					-webkit-appearance: none;
+					margin: 0;
+				}
+
+				/* Firefox */
+				&[type="number"] {
+					-moz-appearance: textfield;
+					-webkit-appearance: none;
+					margin: 0;
+				}
+			}
+
+			.select-drop-down {
+				&.disabled {
+					opacity: .6;
+				}
+			}
+		}
+	}
+}
+
+.input-error {
+	border-color: red !important;
+	border: 1px solid red !important;
+	border-radius: 2.25rem;
+	background-color: #f7e7e9 !important;
+	background: #f7e7e9 !important;
+
+	.react-select__control {
+		background-color: #f7e7e9 !important;
+
+	}
+}
+
+.form_button {
+	display: flex;
+	justify-content: space-between;
+
+	&.reverse {
+		flex-direction: row-reverse;
+	}
+}
