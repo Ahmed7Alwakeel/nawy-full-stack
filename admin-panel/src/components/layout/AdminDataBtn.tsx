@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react";
 import AdminDataDropDown from "./AdminDataDropDown";
-// import Cookies from "js-cookie";
 
 const AdminDataBtn = () => {
     const [dropDownToggler, setDropDownToggler] = useState(false);

@@ -1,6 +1,6 @@
 import { IButtonProps } from "../../types/Interfaces";
 
-const Button = ({ text, customClass, type, children, onClick, disabled, noScroll, loading } : IButtonProps) => {
+const Button = ({ text, customClass, type, children, onClick, disabled, loading } : IButtonProps) => {
     return (
         <button
         className={`button_container ${customClass && customClass} ${disabled && 'disabled'} ${loading && "loading"}`}
@@ -9,7 +9,6 @@ const Button = ({ text, customClass, type, children, onClick, disabled, noScroll
             const contentContainer = document.querySelector(".layout_content");
             contentContainer?.scrollTo({ top: 0, behavior: "smooth" });
             onClick && onClick();
-            // !noScroll && window.scroll(0, 0)
         }}
         disabled={disabled}
     >
