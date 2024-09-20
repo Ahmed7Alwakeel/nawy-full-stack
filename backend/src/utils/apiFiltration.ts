@@ -21,7 +21,6 @@ export default class APIFiltration {
 		return this
 	}
 
-	//ex: sort=price
 	sort() {
 		if ((this.queryString as { sort: string }).sort) {
 			const sortBy = ((this.queryString as { sort: string }).sort as string)

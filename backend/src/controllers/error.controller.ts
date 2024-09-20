@@ -41,9 +41,7 @@ class ErrorHandler {
 
 	globalError = (
 		err: any,
-		req: express.Request,
-		res: express.Response,
-		next: express.NextFunction
+		res: express.Response
 	) => {
 		let error = { ...err }
 		if (err.name === "CastError") error = this.handleCastErrorDB(error)

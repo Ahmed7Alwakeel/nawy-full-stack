@@ -60,7 +60,6 @@ export const selectStyle = {
 		fontSize: "1rem",
 		input: {
 			padding: "0 !important",
-			// display:'none'
 		},
 	}),
 	option: (provided: any, state: any) => ({

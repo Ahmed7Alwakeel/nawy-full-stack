@@ -1,7 +1,7 @@
 import { IApartment } from "../interfaces/apartment.interface"
 import ApartmentModel from "../models/apartment.model"
 import APIFiltration from "../utils/apiFiltration"
-import { Response, Request, NextFunction } from "express"
+import { Request } from "express"
 
 class ApartmentRepo {
 	async create(body: IApartment) {
