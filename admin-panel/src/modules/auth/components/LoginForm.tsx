@@ -10,14 +10,12 @@ import TextContainer from './TextContainer';
 import { IUserData } from '../types/Interfaces';
 import { useDispatch } from 'react-redux';
 import { setUserData, setUserToken } from '../store/redux/authData';
-import { useTranslation } from 'react-i18next';
 import { generalPost } from '../../../API/api';
 
 
 
 const LoginForm = () => {
     const navigate = useNavigate()
-    const { t } = useTranslation()
 
     const [loading, setLoading] = useState(false);
     const dispatch = useDispatch();
@@ -76,14 +74,14 @@ const LoginForm = () => {
                         <Form>
                             <FieldWrapper
                                 inputName={"email"}
-                                inputPlaceholder={t("Email")}
+                                inputPlaceholder={"Email"}
                                 inputError={formik.errors.email}
                                 inputTouched={formik.touched.email}
                                 input
                             />
                             <FieldWrapper
                                 inputName={"password"}
-                                inputPlaceholder={t("Password")}
+                                inputPlaceholder={"Password"}
                                 inputError={formik.errors.password}
                                 inputTouched={formik.touched.password}
                                 input
@@ -91,7 +89,7 @@ const LoginForm = () => {
                             />
                             <div className="form_button double">
                                 <Button loading={loading}>
-                                    <span className="bold">{t("login")}</span>
+                                    <span className="bold">{"Login"}</span>
                                 </Button>
                             </div>
                         </Form>

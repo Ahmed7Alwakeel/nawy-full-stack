@@ -1,4 +1,3 @@
-import { useTranslation } from "react-i18next"
 import Button from "../../../components/buttons/Button"
 import { useNavigate } from "react-router-dom"
 
@@ -15,7 +14,6 @@ interface Props {
 }
 const ApartmentInfo = ({ title, data, id }: Props) => {
 
-    const { t } = useTranslation()
     const navigate = useNavigate()
 
     return (

@@ -16,9 +16,10 @@ NAvigate to the admin-panel folder
 
     cd admin-panel
 
-Copy the example env file and make the required configuration changes in the .env file from docker-compose.yml
+Copy the example env file and make the required configuration changes in the .env file
 
     cp .env.example .env
+    REACT_APP_API_URL=http://localhost:4000/api/v1
 
 NAvigate to the backend folder
 

@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { handleUnAuthenticated } from "../../modules/auth/store/redux/authData";
 import { toast } from "react-toastify";
-import { useTranslation } from "react-i18next";
 import { generalGet } from "../../API/api";
 
 export const authContext = createContext<any>({ handleLogout: () => { }, catchError: () => { } });
@@ -17,13 +16,12 @@ interface prop {
 export default function AuthProvider({ children }: prop) {
   const navigate = useNavigate();
   const dispatch = useDispatch()
-  const { t } = useTranslation()
 
   const removeCookies = () => {
     const cookies = Cookies.get()
     if (Cookies.get("token")) {
       for (let cookie in cookies) {
-        Cookies.remove(cookie) // Remove each cookie
+        Cookies.remove(cookie)
       }
     }
   }
@@ -41,7 +39,7 @@ export default function AuthProvider({ children }: prop) {
   }
 
   const catchError = (error: any, setLoading?: (loading: boolean) => void) => {
-    if(error){
+    if (error) {
       if (error?.response?.data?.status_code == 401 || error?.response?.data?.status_code == 403) {
         setLoading && setLoading(false)
         toast.error(error?.response?.data?.message || "Some thing went wrong")

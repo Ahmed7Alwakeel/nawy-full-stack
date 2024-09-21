@@ -3,11 +3,9 @@
 import { useContext } from "react";
 import { IAdminDataDropDown } from "../../types/Interfaces";
 import { useSelector } from "react-redux";
-import { useTranslation } from "react-i18next";
 import { authContext } from "../../store/context/authContext";
 
 const AdminDataDropDown = ({ dropDownToggler }: IAdminDataDropDown) => {
-    const { t } = useTranslation();
     const { handleLogout } = useContext(authContext)
     const { userData } = useSelector((store: any) => store.authData)
     const logout = () => {
@@ -25,7 +23,7 @@ const AdminDataDropDown = ({ dropDownToggler }: IAdminDataDropDown) => {
                     <h6>{userData?.name}</h6>
                 </div>
             </div>
-            <span className="log-out bold" onClick={() => logout()}>{t("logout")}
+            <span className="log-out bold" onClick={() => logout()}>Logout
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M5 21q-.825 0-1.413-.588T3 19V5q0-.825.588-1.413T5 3h7v2H5v14h7v2H5Zm11-4l-1.375-1.45l2.55-2.55H9v-2h8.175l-2.55-2.55L16 7l5 5l-5 5Z" /></svg>
             </span>
         </div>
