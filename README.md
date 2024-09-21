@@ -1,4 +1,4 @@
-# Nawy Fullstack task
+# Nawy Full Stack task
 
 # Getting started
 
