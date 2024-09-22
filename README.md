@@ -41,6 +41,10 @@ Frontend hosts:
 - http://localhost:3000 for admin-panel
 - http://localhost:8200 for frontend
 
+Admin panel Credentials:
+- Email: admin@admin.com
+- Password: 123
+
 # Overview
 
 The apartment CRUD application consists of a backend API that handles apartment management operations such as creating, reading, updating, and deleting apartment records. A seeder is initially run to create an admin user, who can log in to an admin panel and manage these operations. The admin panel is accessible only to the authenticated admin, allowing them to add, update, and delete apartment listings. On the frontend, a separate public-facing app displays a list of available apartments and provides detailed views for each one, which users can browse without requiring login access. The backend serves the data to both the admin panel and the frontend app.
